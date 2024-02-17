@@ -30,6 +30,9 @@ int partition(int *array, int start, int end, size_t size)
 	pivot = array[end];
 	i = start;
 
+	if (start >= end || array == NULL)
+		return (1);
+
 	for (j = start; j < end; j++)
 	{
 		if (array[j] <= pivot)
